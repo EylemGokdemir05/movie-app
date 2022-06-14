@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { routes } from "../navigation/Router";
+import { routes } from "../navigation/AppNavigator";
 import "../style/Header.css";
 
 const Header = () => {
