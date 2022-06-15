@@ -1,6 +1,4 @@
 const movieReducer = (state = [], action) => {
-  console.log('reducer state: ',state)
-  console.log('reducer action: ',action)
   switch (action.type) {
     case "GET_MOVIES":
       return [...action.movies];

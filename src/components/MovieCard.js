@@ -2,28 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import notFoundImg from "../assets/not-found.jpg";
-import "../style/MovieCard.css";
 
 const MovieCard = ({ Poster, Title, Year, imdbID }) => {
-  console.log('movie card: ,',Poster, Title, Year, imdbID)
   return (
-    <div className="card">
-      <Link to={`/${imdbID}`}>
+    <div className="movies__item">
+      <Link to={`/${imdbID}`} className="movies__item__link">
         <img
           src={Poster === "N/A" ? notFoundImg : Poster}
           alt={Title || `Movie-${imdbID}`}
         />
       </Link>
-      <Link to={`/${imdbID}`} className="info">
-        <h2 className="title">{Title || `Movie ${imdbID}`}</h2>
-        <div className="year">{Year || ""}</div>
-        <span className="IMDB">{imdbID}</span>
+      <Link to={`/${imdbID}`} className="movies__item__text">
+        <h2 className="movies__item__title">{Title || `Movie ${imdbID}`}</h2>
+        <div className="movies__item__year">{Year || ""}</div>
       </Link>
-      {/* <div className="info">
-        <span className="title">{title}</span>
-        <span className="year">{year}</span>
-        <span className="IMDB">{IMDB}</span>
-      </div> */}
     </div>
   );
 };

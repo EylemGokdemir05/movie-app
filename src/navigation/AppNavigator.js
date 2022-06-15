@@ -1,5 +1,8 @@
+import React from "react";
 import Home from "../pages/Home";
 import Detail from "../pages/Detail";
+import NotFound from "../components/NotFound";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 export const routes = [
   {

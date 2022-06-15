@@ -8,7 +8,6 @@ const getMovieList = async (query) => {
       page: 1,
     },
   }).then((response) => response.data.Search).catch((error) => error);
-  console.log('movie data: ',data)
   return data;
 };
 

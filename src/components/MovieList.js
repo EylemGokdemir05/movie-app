@@ -6,15 +6,13 @@ import getVisibleMovies from "../selectors/visibleMovies";
 
 const MovieList = () => {
   const { movies } = useSelector((state) => state);
-  console.log('state useSelector movies: ',movies)
   return (
     <div>
       {movies.length === 0 && (
-        <p>Sorry, any movies have not been found. Try to search again!</p>
+        <p className="error-msg">Sorry, any movies have not been found. Try to search again!</p>
       )}
-      <div>
+      <div className="movies">
         {movies.map((movie) => {
-          console.log('movie info: ',movie)
           const { Poster, Title, Year, imdbID } = movie;
           return (
             <MovieCard

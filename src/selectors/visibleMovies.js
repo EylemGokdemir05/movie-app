@@ -3,9 +3,6 @@ const getVisibleMovies = (movies, { title, period }) =>
     const matchFilterTitle = title
       ? movie.Title.toLowerCase().includes(title)
       : false;
-    console.log('visible movie:',movie)
-    console.log('visible title:',title)
-    console.log('visible period:',period)
     const startYear = Number(period.split("-")[0]);
     const endYear = Number(period.split("-")[1]);
     const movieYear = Number(movie.Year);

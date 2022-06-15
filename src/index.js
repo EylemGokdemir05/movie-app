@@ -2,21 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import configureStore from "./context/store/configureStore";
-import "./index.css";
+import "./styles/style.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import MovieAppProvider from "./context/MovieContext";
 import { setTitleFilter } from "./context/actions/filterAction";
 
 const store = configureStore();
-
-// const jsx = (
-//   <Provider store={store}>
-//     <App />
-//   </Provider>
-// )
-
-// ReactDOM.render(jsx, document.getElementById("root"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

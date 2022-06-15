@@ -39,13 +39,13 @@ const Detail = ({ movie, updateMovie }) => {
   const { Poster, Title, Year, imdbID } = movie;
 
   return (
-    <div>
+    <div className="container pdb">
       {error && <p className="error-msg">{error}</p>}
       {Title === undefined ? (
         <NotFound />
       ) : (
-        <div>
-          <div>
+        <div className="movie">
+          <div className="movie__image-wrap">
             <img
               src={Poster === "N/A" ? notFoundImg : Poster}
               alt={Title || `Movie-${imdbID}`}

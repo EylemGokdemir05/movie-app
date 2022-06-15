@@ -47,7 +47,7 @@ const FilterList = ({ setTitleFilter, setPeriodFilter }) => {
   };
 
   return (
-    <div>
+    <div className="filters">
       {error && <p>{error}</p>}
       <form onSubmit={onSearch}>
         <input
